@@ -30,6 +30,8 @@ import androidx.media3.exoplayer.smoothstreaming.DefaultSsChunkSource;
 import androidx.media3.exoplayer.smoothstreaming.SsMediaSource;
 import androidx.media3.exoplayer.source.MediaSource;
 import androidx.media3.exoplayer.source.ProgressiveMediaSource;
+import androidx.media3.exoplayer.DefaultRenderersFactory;
+
 
 
 //import com.google.android.exoplayer2.C;
@@ -95,8 +97,9 @@ import java.util.Map;
     this.eventChannel = eventChannel;
     this.textureEntry = textureEntry;
     this.options = options;
-
-    ExoPlayer exoPlayer = new ExoPlayer.Builder(context).build();
+    DefaultRenderersFactory renderersFactory = new DefaultRenderersFactory(context);
+		renderersFactory.setEnableDecoderFallback(true);
+    ExoPlayer exoPlayer = new ExoPlayer.Builder(context, renderersFactory).build();
     Uri uri = Uri.parse(dataSource);
 
     buildHttpDataSourceFactory(httpHeaders);
