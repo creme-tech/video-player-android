@@ -1,6 +1,6 @@
-name: video_player_m3_exo
-description: Android implementation of the cached_video_player_m3_exo plugin.
-repository: https://github.com/mfirmansyahidris/video_player_m3_exo
+name: video_player_android
+description: Android implementation of the cached_video_player_android plugin.
+repository: https://github.com/creme-tech/video-player-android
 version: 1.0.0
 
 environment:

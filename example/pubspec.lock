@@ -503,7 +503,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
-  video_player_m3_exo:
+  video_player_android:
     dependency: "direct main"
     description:
       path: ".."
